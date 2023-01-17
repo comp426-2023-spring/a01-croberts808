@@ -1,0 +1,23 @@
+{
+  "name": "426_first_web_server",
+  "version": "1.0.0",
+  "description": "Web Server for Assn1 in 426",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a01-croberts808.git"
+  },
+  "author": "croberts808",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a01-croberts808/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a01-croberts808#readme",
+  "dependencies": {
+    "minimist": "^1.2.7"
+  }
+}

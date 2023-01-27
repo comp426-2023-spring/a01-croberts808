@@ -16,22 +16,15 @@ const port = args.port || 3000;
 
     // If there is an error, put it on the console error and return. 
     // Do not be nice about exiting.
-
-
-
-
 const hostname = '127.0.0.1';
-
-
 
 fs.readFile('./public/index.html', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
-      return;
+      exit();
     }
-    console.log(data);
+    // console.log(data);
   });
-
 
 // Define a const `server` as an arrow function using http.createServer. 
 // Use the documentation for the node.js http module. 
@@ -42,10 +35,9 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
-    res.setHeader('text/html', 'text/plain');
-    res.end('./public/index.html');
+    res.setHeader('Content-Type', 'text/html');
+    res.end();
   });
-
 
 // Start the `server` const listening on the port defined by argument in your `port` const. 
 // Put the exact message `Server listening on port ${port}` on the console log. 
